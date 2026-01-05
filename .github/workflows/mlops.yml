@@ -1,0 +1,46 @@
+name: MLOps CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 2 * * 1'  # Weekly retraining
+
+jobs:
+  test-train-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        pip install -r deployment/requirements.txt
+        pip install dvc[all]
+    
+    - name: Run DVC pull
+      run: dvc pull
+    
+    - name: Run training pipeline
+      run: python src/train_pipeline.py
+    
+    - name: Test model
+      run: |
+        python -c "
+        import joblib
+        model = joblib.load('models/heart_disease_pipeline_prod.joblib')
+        print('✅ Model loaded successfully')
+        "
+    
+    - name: Deploy to registry (on main)
+      if: github.ref == 'refs/heads/main'
+      run: |
+        echo "🚀 Model deployed to production"
+        dvc push

@@ -1,0 +1,14 @@
+artifact_uri: file:C:/BITS/MTech/Semesters/Semester3/MLOps/Assignments/mlops-assignment-final/mlruns/571483003188791152/e10cb98fc58449b8ab700b54c8ed3168/artifacts
+end_time: 1767601108698
+entry_point_name: ''
+experiment_id: '571483003188791152'
+lifecycle_stage: active
+run_id: e10cb98fc58449b8ab700b54c8ed3168
+run_name: Random_Forest_Tuned
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1767601096636
+status: 3
+tags: []
+user_id: Hp

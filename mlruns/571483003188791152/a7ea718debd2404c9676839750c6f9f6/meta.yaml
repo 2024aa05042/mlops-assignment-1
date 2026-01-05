@@ -1,0 +1,14 @@
+artifact_uri: file:C:/BITS/MTech/Semesters/Semester3/MLOps/Assignments/mlops-assignment-final/mlruns/571483003188791152/a7ea718debd2404c9676839750c6f9f6/artifacts
+end_time: 1767601094852
+entry_point_name: ''
+experiment_id: '571483003188791152'
+lifecycle_stage: active
+run_id: a7ea718debd2404c9676839750c6f9f6
+run_name: Logistic_Regression_Baseline
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1767601080467
+status: 3
+tags: []
+user_id: Hp
