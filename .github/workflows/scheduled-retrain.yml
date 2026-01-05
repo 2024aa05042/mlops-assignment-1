@@ -1,0 +1,91 @@
+name: 🤖 Scheduled Model Retraining
+
+on:
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+env:
+  PYTHON_VERSION: "3.9"
+
+jobs:
+  retrain-model:
+    name: 🔄 Scheduled Model Retraining
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v3
+      
+    - name: 🐍 Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        cache: 'pip'
+        cache-dependency-path: deployment/requirements.txt
+    
+    - name: 📦 Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pandas numpy scikit-learn joblib mlflow
+        if [ -f deployment/requirements.txt ]; then pip install -r deployment/requirements.txt; fi
+    
+    - name: 🤖 Retrain Model
+      run: |
+        echo "Starting scheduled model retraining..."
+        python src/train_pipeline.py 2>&1 | tee retrain_log.txt
+      continue-on-error: false
+    
+    - name: 📊 Model Validation
+      run: |
+        cat << 'EOF' > validate_model.py
+        import joblib
+        import pandas as pd
+        import os
+        from datetime import datetime
+        
+        model_path = "models/heart_disease_pipeline_prod.joblib"
+        
+        print("=== Model Validation ===")
+        if os.path.exists(model_path):
+            model = joblib.load(model_path)
+            print(f"✅ Model loaded successfully")
+            
+            # Get model info
+            print(f"Model type: {type(model).__name__}")
+            print(f"Model size: {os.path.getsize(model_path) / (1024*1024):.2f} MB")
+            
+            # Test with sample data
+            test_sample = pd.DataFrame({
+                'age': [50], 'sex': [1], 'cp': [2], 'trestbps': [130],
+                'chol': [220], 'fbs': [0], 'restecg': [0], 'thalach': [160],
+                'exang': [0], 'oldpeak': [1.0], 'slope': [1], 'ca': [0], 'thal': [2]
+            })
+            
+            pred = model.predict(test_sample)
+            proba = model.predict_proba(test_sample)
+            print(f"✅ Model prediction works")
+            print(f"   Prediction: {pred[0]}")
+            print(f"   Probability: {proba[0][1]:.4f}")
+        else:
+            print(f"❌ Model file not found at {model_path}")
+            exit(1)
+        EOF
+        python validate_model.py
+    
+    - name: 📤 Upload Retrained Model
+      uses: actions/upload-artifact@v3
+      with:
+        name: retrained-model-${{ github.run_id }}
+        path: |
+          models/
+          retrain_log.txt
+        retention-days: 90
+    
+    - name: 📧 Notify Completion
+      if: always()
+      run: |
+        echo "Scheduled retraining job completed"
+        echo "Status: ${{ job.status }}"
+        echo "Timestamp: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"

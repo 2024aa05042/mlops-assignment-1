@@ -16,8 +16,8 @@ app = FastAPI(title="Heart Disease Prediction API")
 # Resolve model path relative to this file
 BASE_DIR = os.path.dirname(__file__)
 MODEL_FILENAME = "heart_disease_pipeline_prod.joblib"
-#MODEL_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "..", "models", MODEL_FILENAME))
-MODEL_PATH = "/app/models/heart_disease_pipeline_prod.joblib"
+MODEL_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "..", "models", MODEL_FILENAME))
+#MODEL_PATH = "/app/models/heart_disease_pipeline_prod.joblib"
 import sklearn, sys
 print("API ENV:", sys.executable, sklearn.__version__)
 # Try to load model but don't crash the app at import time; record any error
