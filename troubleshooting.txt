@@ -1,0 +1,109 @@
+-------------------------------Fast API ------------------------
+Install Python 3.11
+https://www.python.org/downloads/release/python-3110/
+
+Run this in PowerShell:
+py -0p
+
+Then create venv with:
+py -3.11 -m venv venv
+
+Activate:
+venv\Scripts\activate
+
+
+Then install packages:
+Inside /deployment
+
+python -m pip install --upgrade pip
+python -m pip install scikit-learn==1.5.0 fastapi uvicorn joblib numpy
+
+
+Run app:
+uvicorn app.main:app --reload
+
+
+-------------------------------Docker---------------------------
+
+Build docker
+
+Open Docker desktop
+
+Inside root folder
+docker build -t heart-api -f deployment/Dockerfile .
+
+
+Run Container
+docker run -p 8000:8000 heart-api
+
+--------------------------------# Install DVC (Data Version Control) ---------------------
+inside root folder 
+
+venv\Scripts\activate
+
+python -m pip install dvc
+dvc --version
+git init
+dvc init
+dvc dag
+
+------------------------------------Kubernetes -----------------------------
+1. START MINIKUBE (Local Kubernetes)
+minikube start --driver=docker
+
+2. UI Dashboard
+minikube dashboard
+ 
+3.REBUILD FOR MINIKUBE:
+docker build -t heart-api -f deployment/Dockerfile .
+
+4. Load docker image to kubernetes
+minikube image load heart-api:latest
+
+5. DEPLOY TO K8s:
+kubectl delete deployment heart-api
+kubectl delete service heart-disease-service
+kubectl apply -f k8s/
+
+5. VERIFY DEPLOYMENT:
+kubectl get pods
+kubectl get svc
+
+6. Running the service
+minikube service heart-disease-service
+
+
+If service is not running, check with following steps:
+kubectl get pods
+
+kubectl describe pod <pod-name>
+kubectl logs <pod-name>
+kubectl get svc
+kubectl describe svc heart-disease-service
+
+
+http://127.0.0.1:57316/predict
+
+
+----------------------------------HELM-------------------
+To check if HELM is correctly configured
+helm template heart-api helm/heart-disease/
+
+helm install heart-api helm/heart-disease/
+
+It fails, In Kubernetes, your Deployment already exists, but it was created by: kubectl apply -f k8s/…
+
+kubectl delete deployment heart-api
+kubectl delete service heart-disease-service
+
+helm install heart-api helm/heart-disease/
+
+
+Running the service
+minikube service heart-api
+
+
+http://127.0.0.1:50100/predict
+
+
+
