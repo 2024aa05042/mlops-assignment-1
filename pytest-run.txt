@@ -1,0 +1,61 @@
+REM 1. Open Command Prompt or PowerShell
+REM 2. Navigate to project
+cd C:\BITS\MTech\Semesters\Semester3\MLOps\Assignments\mlops-assignment-final
+
+REM 3. Install dependencies
+pip install -r requirements-dev.txt
+
+REM 4. Run tests (choose one):
+
+REM Option A: Simple test run
+python -m pytest tests/ -v
+
+REM Option B: With coverage report
+pytest tests/ -v --cov=src --cov=deployment/app --cov-report=html
+
+REM Option C: Using batch script
+run_tests.bat
+
+REM 5. View coverage report
+start htmlcov\index.html
+
+---------------------------------------------------------
+
+Run All Tests
+pytest tests/ -v
+
+
+Run with Coverage Report
+pytest tests/ -v --cov=src --cov=deployment/app --cov-report=html
+# Then view: htmlcov/index.html
+
+--------------------------------------------------
+Run Specific Test File
+# Data processing tests only
+pytest tests/test_data_processing.py -v
+
+# Model tests only
+pytest tests/test_model.py -v
+
+-----------------------------------------------------------
+
+Run Specific Test Class
+# Test data loading
+pytest tests/test_data_processing.py::TestDataLoading -v
+
+# Test model training
+pytest tests/test_model.py::TestModelTraining -v
+
+------------------------------------------------------
+
+Run Specific Test Method
+pytest tests/test_model.py::TestModelCreation::test_random_forest_creation -v
+
+---------------------------------------------------------------------
+
+Run Tests Matching Pattern
+# Run all prediction tests
+pytest -k "predict" -v
+
+# Run all validation tests
+pytest -k "validation" -v
