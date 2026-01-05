@@ -1,0 +1,309 @@
+c:\Users\Hp\anaconda3\Lib\site-packages\pydantic\_internal\_fields.py:161: UserWarning: Field "model_name" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+Registry store URI not provided. Using backend store URI.
+c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\server\handlers.py:295: FutureWarning: The filesystem tracking backend (e.g., './mlruns') will be deprecated in February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://github.com/mlflow/mlflow/issues/18534 for more details and migration guidance. For migrating existing data, https://github.com/mlflow/mlflow-export-import can be used.
+  return FileStore(store_uri, artifact_uri)
+c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\server\handlers.py:324: FutureWarning: The filesystem model registry backend (e.g., './mlruns') will be deprecated in February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://github.com/mlflow/mlflow/issues/18534 for more details and migration guidance. For migrating existing data, https://github.com/mlflow/mlflow-export-import can be used.
+  return FileStore(store_uri)
+[MLflow] Security middleware enabled with default settings (localhost-only). To allow connections from other hosts, use --host 0.0.0.0 and configure --allowed-hosts and --cors-allowed-origins.
+INFO:     Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+INFO:     Started parent process [34876]
+c:\Users\Hp\anaconda3\Lib\site-packages\pydantic\_internal\_fields.py:161: UserWarning: Field "model_name" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+c:\Users\Hp\anaconda3\Lib\site-packages\pydantic\_internal\_fields.py:161: UserWarning: Field "model_name" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+c:\Users\Hp\anaconda3\Lib\site-packages\pydantic\_internal\_fields.py:161: UserWarning: Field "model_name" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+c:\Users\Hp\anaconda3\Lib\site-packages\pydantic\_internal\_fields.py:161: UserWarning: Field "model_name" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+INFO:     Started server process [20108]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [27360]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38900]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [22904]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:62199 - "GET / HTTP/1.1" 304 Not Modified
+c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\server\handlers.py:295: FutureWarning: The filesystem tracking backend (e.g., './mlruns') will be deprecated in February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://github.com/mlflow/mlflow/issues/18534 for more details and migration guidance. For migrating existing data, https://github.com/mlflow/mlflow-export-import can be used.
+  return FileStore(store_uri, artifact_uri)
+WARNING:root:Malformed experiment '0'. Detailed error Yaml file '.\mlruns\0\meta.yaml' does not exist.
+Traceback (most recent call last):
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 379, in search_experiments
+    exp = self._get_experiment(exp_id, view_type)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 477, in _get_experiment
+    meta = FileStore._read_yaml(experiment_dir, FileStore.META_DATA_FILE_NAME)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1662, in _read_yaml
+    return _read_helper(root, file_name, attempts_remaining=retries)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1655, in _read_helper
+    result = read_yaml(root, file_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\utils\yaml_utils.py", line 104, in read_yaml
+    raise MissingConfigException(f"Yaml file '{file_path}' does not exist.")
+mlflow.exceptions.MissingConfigException: Yaml file '.\mlruns\0\meta.yaml' does not exist.
+INFO:     127.0.0.1:60242 - "GET /ajax-api/2.0/mlflow/experiments/search?max_results=5&order_by=last_update_time+DESC HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60848 - "GET /static-files/favicon.ico HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60848 - "GET /static-files/static/js/3989.74bc5e28.chunk.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60848 - "GET /static-files/static/js/4783.8570540d.chunk.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /static-files/static/css/4783.26533251.chunk.css HTTP/1.1" 200 OK
+WARNING:root:Malformed experiment '0'. Detailed error Yaml file '.\mlruns\0\meta.yaml' does not exist.
+Traceback (most recent call last):
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 379, in search_experiments
+    exp = self._get_experiment(exp_id, view_type)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 477, in _get_experiment
+    meta = FileStore._read_yaml(experiment_dir, FileStore.META_DATA_FILE_NAME)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1662, in _read_yaml
+    return _read_helper(root, file_name, attempts_remaining=retries)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1655, in _read_helper
+    result = read_yaml(root, file_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\utils\yaml_utils.py", line 104, in read_yaml
+    raise MissingConfigException(f"Yaml file '{file_path}' does not exist.")
+mlflow.exceptions.MissingConfigException: Yaml file '.\mlruns\0\meta.yaml' does not exist.
+INFO:     127.0.0.1:60242 - "GET /ajax-api/2.0/mlflow/experiments/search?max_results=25&order_by=last_update_time+DESC HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62199 - "GET /static-files/TelemetryLogger.telemetry-worker.706844bde809e5593e6c.worker.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62199 - "GET /ajax-api/3.0/mlflow/ui-telemetry HTTP/1.1" 200 OK
+c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\server\handlers.py:295: FutureWarning: The filesystem tracking backend (e.g., './mlruns') will be deprecated in February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://github.com/mlflow/mlflow/issues/18534 for more details and migration guidance. For migrating existing data, https://github.com/mlflow/mlflow-export-import can be used.
+  return FileStore(store_uri, artifact_uri)
+WARNING:root:Malformed experiment '0'. Detailed error Yaml file '.\mlruns\0\meta.yaml' does not exist.
+Traceback (most recent call last):
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 379, in search_experiments
+    exp = self._get_experiment(exp_id, view_type)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 477, in _get_experiment
+    meta = FileStore._read_yaml(experiment_dir, FileStore.META_DATA_FILE_NAME)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1662, in _read_yaml
+    return _read_helper(root, file_name, attempts_remaining=retries)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1655, in _read_helper
+    result = read_yaml(root, file_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\utils\yaml_utils.py", line 104, in read_yaml
+    raise MissingConfigException(f"Yaml file '{file_path}' does not exist.")
+mlflow.exceptions.MissingConfigException: Yaml file '.\mlruns\0\meta.yaml' does not exist.
+INFO:     127.0.0.1:55255 - "GET /ajax-api/2.0/mlflow/experiments/search?max_results=25&order_by=last_update_time+DESC HTTP/1.1" 200 OK
+c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\server\handlers.py:295: FutureWarning: The filesystem tracking backend (e.g., './mlruns') will be deprecated in February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://github.com/mlflow/mlflow/issues/18534 for more details and migration guidance. For migrating existing data, https://github.com/mlflow/mlflow-export-import can be used.
+  return FileStore(store_uri, artifact_uri)
+WARNING:root:Malformed experiment '0'. Detailed error Yaml file '.\mlruns\0\meta.yaml' does not exist.
+Traceback (most recent call last):
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 379, in search_experiments
+    exp = self._get_experiment(exp_id, view_type)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 477, in _get_experiment
+    meta = FileStore._read_yaml(experiment_dir, FileStore.META_DATA_FILE_NAME)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1662, in _read_yaml
+    return _read_helper(root, file_name, attempts_remaining=retries)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1655, in _read_helper
+    result = read_yaml(root, file_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\utils\yaml_utils.py", line 104, in read_yaml
+    raise MissingConfigException(f"Yaml file '{file_path}' does not exist.")
+mlflow.exceptions.MissingConfigException: Yaml file '.\mlruns\0\meta.yaml' does not exist.
+INFO:     127.0.0.1:64252 - "GET /ajax-api/2.0/mlflow/experiments/search?max_results=25&order_by=last_update_time+DESC HTTP/1.1" 200 OK
+c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\server\handlers.py:295: FutureWarning: The filesystem tracking backend (e.g., './mlruns') will be deprecated in February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://github.com/mlflow/mlflow/issues/18534 for more details and migration guidance. For migrating existing data, https://github.com/mlflow/mlflow-export-import can be used.
+  return FileStore(store_uri, artifact_uri)
+WARNING:root:Malformed experiment '0'. Detailed error Yaml file '.\mlruns\0\meta.yaml' does not exist.
+Traceback (most recent call last):
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 379, in search_experiments
+    exp = self._get_experiment(exp_id, view_type)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 477, in _get_experiment
+    meta = FileStore._read_yaml(experiment_dir, FileStore.META_DATA_FILE_NAME)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1662, in _read_yaml
+    return _read_helper(root, file_name, attempts_remaining=retries)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1655, in _read_helper
+    result = read_yaml(root, file_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\utils\yaml_utils.py", line 104, in read_yaml
+    raise MissingConfigException(f"Yaml file '{file_path}' does not exist.")
+mlflow.exceptions.MissingConfigException: Yaml file '.\mlruns\0\meta.yaml' does not exist.
+INFO:     127.0.0.1:52628 - "GET /ajax-api/2.0/mlflow/experiments/search?max_results=25&order_by=last_update_time+DESC HTTP/1.1" 200 OK
+WARNING:root:Malformed experiment '0'. Detailed error Yaml file '.\mlruns\0\meta.yaml' does not exist.
+Traceback (most recent call last):
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 379, in search_experiments
+    exp = self._get_experiment(exp_id, view_type)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 477, in _get_experiment
+    meta = FileStore._read_yaml(experiment_dir, FileStore.META_DATA_FILE_NAME)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1662, in _read_yaml
+    return _read_helper(root, file_name, attempts_remaining=retries)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1655, in _read_helper
+    result = read_yaml(root, file_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\utils\yaml_utils.py", line 104, in read_yaml
+    raise MissingConfigException(f"Yaml file '{file_path}' does not exist.")
+mlflow.exceptions.MissingConfigException: Yaml file '.\mlruns\0\meta.yaml' does not exist.
+INFO:     127.0.0.1:61581 - "GET /ajax-api/2.0/mlflow/experiments/search?max_results=25&order_by=last_update_time+DESC HTTP/1.1" 200 OK
+c:\Users\Hp\anaconda3\Lib\site-packages\pydantic\_internal\_fields.py:161: UserWarning: Field "model_name" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+Registry store URI not provided. Using backend store URI.
+c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\server\handlers.py:295: FutureWarning: The filesystem tracking backend (e.g., './mlruns') will be deprecated in February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://github.com/mlflow/mlflow/issues/18534 for more details and migration guidance. For migrating existing data, https://github.com/mlflow/mlflow-export-import can be used.
+  return FileStore(store_uri, artifact_uri)
+c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\server\handlers.py:324: FutureWarning: The filesystem model registry backend (e.g., './mlruns') will be deprecated in February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://github.com/mlflow/mlflow/issues/18534 for more details and migration guidance. For migrating existing data, https://github.com/mlflow/mlflow-export-import can be used.
+  return FileStore(store_uri)
+[MLflow] Security middleware enabled with default settings (localhost-only). To allow connections from other hosts, use --host 0.0.0.0 and configure --allowed-hosts and --cors-allowed-origins.
+INFO:     Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+INFO:     Started parent process [19240]
+c:\Users\Hp\anaconda3\Lib\site-packages\pydantic\_internal\_fields.py:161: UserWarning: Field "model_name" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+c:\Users\Hp\anaconda3\Lib\site-packages\pydantic\_internal\_fields.py:161: UserWarning: Field "model_name" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+c:\Users\Hp\anaconda3\Lib\site-packages\pydantic\_internal\_fields.py:161: UserWarning: Field "model_name" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+c:\Users\Hp\anaconda3\Lib\site-packages\pydantic\_internal\_fields.py:161: UserWarning: Field "model_name" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+INFO:     Started server process [14200]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [41308]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [2512]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [27620]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:54682 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54682 - "GET /ajax-api/3.0/mlflow/ui-telemetry HTTP/1.1" 200 OK
+c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\server\handlers.py:295: FutureWarning: The filesystem tracking backend (e.g., './mlruns') will be deprecated in February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://github.com/mlflow/mlflow/issues/18534 for more details and migration guidance. For migrating existing data, https://github.com/mlflow/mlflow-export-import can be used.
+  return FileStore(store_uri, artifact_uri)
+WARNING:root:Malformed experiment '0'. Detailed error Yaml file '.\mlruns\0\meta.yaml' does not exist.
+Traceback (most recent call last):
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 379, in search_experiments
+    exp = self._get_experiment(exp_id, view_type)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 477, in _get_experiment
+    meta = FileStore._read_yaml(experiment_dir, FileStore.META_DATA_FILE_NAME)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1662, in _read_yaml
+    return _read_helper(root, file_name, attempts_remaining=retries)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1655, in _read_helper
+    result = read_yaml(root, file_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\utils\yaml_utils.py", line 104, in read_yaml
+    raise MissingConfigException(f"Yaml file '{file_path}' does not exist.")
+mlflow.exceptions.MissingConfigException: Yaml file '.\mlruns\0\meta.yaml' does not exist.
+INFO:     127.0.0.1:54682 - "GET /ajax-api/2.0/mlflow/experiments/search?max_results=5&order_by=last_update_time+DESC HTTP/1.1" 200 OK
+c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\server\handlers.py:295: FutureWarning: The filesystem tracking backend (e.g., './mlruns') will be deprecated in February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://github.com/mlflow/mlflow/issues/18534 for more details and migration guidance. For migrating existing data, https://github.com/mlflow/mlflow-export-import can be used.
+  return FileStore(store_uri, artifact_uri)
+WARNING:root:Malformed experiment '0'. Detailed error Yaml file '.\mlruns\0\meta.yaml' does not exist.
+Traceback (most recent call last):
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 379, in search_experiments
+    exp = self._get_experiment(exp_id, view_type)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 477, in _get_experiment
+    meta = FileStore._read_yaml(experiment_dir, FileStore.META_DATA_FILE_NAME)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1662, in _read_yaml
+    return _read_helper(root, file_name, attempts_remaining=retries)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1655, in _read_helper
+    result = read_yaml(root, file_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\utils\yaml_utils.py", line 104, in read_yaml
+    raise MissingConfigException(f"Yaml file '{file_path}' does not exist.")
+mlflow.exceptions.MissingConfigException: Yaml file '.\mlruns\0\meta.yaml' does not exist.
+INFO:     127.0.0.1:55881 - "GET /ajax-api/2.0/mlflow/experiments/search?max_results=5&order_by=last_update_time+DESC HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55881 - "GET /static-files/static/js/2820.d5fcb9db.chunk.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55881 - "GET /static-files/static/js/9926.53052f80.chunk.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50060 - "GET /static-files/static/css/9926.73d820e1.chunk.css HTTP/1.1" 200 OK
+c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\server\handlers.py:324: FutureWarning: The filesystem model registry backend (e.g., './mlruns') will be deprecated in February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://github.com/mlflow/mlflow/issues/18534 for more details and migration guidance. For migrating existing data, https://github.com/mlflow/mlflow-export-import can be used.
+  return FileStore(store_uri)
+INFO:     127.0.0.1:50060 - "GET /ajax-api/2.0/mlflow/registered-models/search?filter=&max_results=25&order_by=name+ASC HTTP/1.1" 200 OK
+c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\server\handlers.py:295: FutureWarning: The filesystem tracking backend (e.g., './mlruns') will be deprecated in February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://github.com/mlflow/mlflow/issues/18534 for more details and migration guidance. For migrating existing data, https://github.com/mlflow/mlflow-export-import can be used.
+  return FileStore(store_uri, artifact_uri)
+WARNING:root:Malformed experiment '0'. Detailed error Yaml file '.\mlruns\0\meta.yaml' does not exist.
+Traceback (most recent call last):
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 379, in search_experiments
+    exp = self._get_experiment(exp_id, view_type)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 477, in _get_experiment
+    meta = FileStore._read_yaml(experiment_dir, FileStore.META_DATA_FILE_NAME)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1662, in _read_yaml
+    return _read_helper(root, file_name, attempts_remaining=retries)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1655, in _read_helper
+    result = read_yaml(root, file_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\utils\yaml_utils.py", line 104, in read_yaml
+    raise MissingConfigException(f"Yaml file '{file_path}' does not exist.")
+mlflow.exceptions.MissingConfigException: Yaml file '.\mlruns\0\meta.yaml' does not exist.
+INFO:     127.0.0.1:50060 - "GET /ajax-api/2.0/mlflow/experiments/search?max_results=25&order_by=last_update_time+DESC HTTP/1.1" 200 OK
+WARNING:root:Malformed experiment '0'. Detailed error Yaml file '.\mlruns\0\meta.yaml' does not exist.
+Traceback (most recent call last):
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 379, in search_experiments
+    exp = self._get_experiment(exp_id, view_type)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 477, in _get_experiment
+    meta = FileStore._read_yaml(experiment_dir, FileStore.META_DATA_FILE_NAME)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1662, in _read_yaml
+    return _read_helper(root, file_name, attempts_remaining=retries)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1655, in _read_helper
+    result = read_yaml(root, file_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\utils\yaml_utils.py", line 104, in read_yaml
+    raise MissingConfigException(f"Yaml file '{file_path}' does not exist.")
+mlflow.exceptions.MissingConfigException: Yaml file '.\mlruns\0\meta.yaml' does not exist.
+INFO:     127.0.0.1:50851 - "GET /ajax-api/2.0/mlflow/experiments/search?max_results=25&order_by=last_update_time+DESC HTTP/1.1" 200 OK
+c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\server\handlers.py:295: FutureWarning: The filesystem tracking backend (e.g., './mlruns') will be deprecated in February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://github.com/mlflow/mlflow/issues/18534 for more details and migration guidance. For migrating existing data, https://github.com/mlflow/mlflow-export-import can be used.
+  return FileStore(store_uri, artifact_uri)
+WARNING:root:Malformed experiment '0'. Detailed error Yaml file '.\mlruns\0\meta.yaml' does not exist.
+Traceback (most recent call last):
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 379, in search_experiments
+    exp = self._get_experiment(exp_id, view_type)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 477, in _get_experiment
+    meta = FileStore._read_yaml(experiment_dir, FileStore.META_DATA_FILE_NAME)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1662, in _read_yaml
+    return _read_helper(root, file_name, attempts_remaining=retries)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\store\tracking\file_store.py", line 1655, in _read_helper
+    result = read_yaml(root, file_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Hp\anaconda3\Lib\site-packages\mlflow\utils\yaml_utils.py", line 104, in read_yaml
+    raise MissingConfigException(f"Yaml file '{file_path}' does not exist.")
+mlflow.exceptions.MissingConfigException: Yaml file '.\mlruns\0\meta.yaml' does not exist.
+INFO:     127.0.0.1:58319 - "GET /ajax-api/2.0/mlflow/experiments/search?max_results=25&order_by=last_update_time+DESC HTTP/1.1" 200 OK

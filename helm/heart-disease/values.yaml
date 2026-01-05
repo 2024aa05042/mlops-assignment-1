@@ -1,0 +1,8 @@
+image:
+  repository: heart-api
+  tag: latest
+
+replicaCount: 1
+service:
+  type: NodePort
+  port: 80

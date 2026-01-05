@@ -1,0 +1,10 @@
+artifact_location: file:C:/BITS/MTech/Semesters/Semester3/MLOps/Assignments/mlops-assignment-final/mlruns/343601172360110973/models/m-225a8776ab19432da85a5745397f6928/artifacts
+creation_timestamp: 1767534303426
+experiment_id: '343601172360110973'
+last_updated_timestamp: 1767534308866
+model_id: m-225a8776ab19432da85a5745397f6928
+model_type: null
+name: prod_model
+source_run_id: 91ce094264f74dbb8fbd122e36d6479f
+status: 2
+status_message: null

@@ -1,0 +1,14 @@
+artifact_uri: file:C:/BITS/MTech/Semesters/Semester3/MLOps/Assignments/mlops-assignment-final/mlruns/343601172360110973/cf70ed6b4f6f4c6c8ea806b57d44e4b2/artifacts
+end_time: 1767528728716
+entry_point_name: ''
+experiment_id: '343601172360110973'
+lifecycle_stage: active
+run_id: cf70ed6b4f6f4c6c8ea806b57d44e4b2
+run_name: Automated_Training
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1767528712771
+status: 3
+tags: []
+user_id: Hp

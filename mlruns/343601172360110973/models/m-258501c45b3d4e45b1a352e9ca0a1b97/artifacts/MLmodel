@@ -1,0 +1,22 @@
+artifact_path: file:C:/BITS/MTech/Semesters/Semester3/MLOps/Assignments/mlops-assignment-final/mlruns/343601172360110973/models/m-258501c45b3d4e45b1a352e9ca0a1b97/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.7
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.0
+mlflow_version: 3.8.0
+model_id: m-258501c45b3d4e45b1a352e9ca0a1b97
+model_size_bytes: 1500925
+model_uuid: m-258501c45b3d4e45b1a352e9ca0a1b97
+prompts: null
+run_id: 389224a5e8ad42ec8faafb5f2023ecf9
+utc_time_created: '2026-01-04 14:25:19.262679'

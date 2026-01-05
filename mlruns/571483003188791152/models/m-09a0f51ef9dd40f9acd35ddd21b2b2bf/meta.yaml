@@ -1,0 +1,10 @@
+artifact_location: file:C:/BITS/MTech/Semesters/Semester3/MLOps/Assignments/mlops-assignment-final/mlruns/571483003188791152/models/m-09a0f51ef9dd40f9acd35ddd21b2b2bf/artifacts
+creation_timestamp: 1767518470984
+experiment_id: '571483003188791152'
+last_updated_timestamp: 1767518475345
+model_id: m-09a0f51ef9dd40f9acd35ddd21b2b2bf
+model_type: null
+name: best_model
+source_run_id: 7cdd25233e874aae92360759719e6e28
+status: 2
+status_message: null
