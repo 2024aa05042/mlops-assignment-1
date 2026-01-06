@@ -1,0 +1,14 @@
+artifact_uri: file:C:/BITS/MTech/Semesters/Semester3/MLOps/Assignments/mlops-assignment-final/mlruns/571483003188791152/73054634c262499596bcff328979d780/artifacts
+end_time: 1767638108815
+entry_point_name: ''
+experiment_id: '571483003188791152'
+lifecycle_stage: active
+run_id: 73054634c262499596bcff328979d780
+run_name: Feature_Importance_Plot
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1767638108636
+status: 3
+tags: []
+user_id: Hp
